@@ -1,0 +1,15 @@
+.pdms-table-container {
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .pdms-table-container {
+    overflow-x: auto;
+
+    table,
+    mat-table,
+    mat-paginator {
+      min-width: 700px;
+    }
+  }
+}

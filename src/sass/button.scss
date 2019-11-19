@@ -1,0 +1,25 @@
+@import './_variables';
+
+%defaultButton {
+  font-family: $body-font-family;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+  background: $default-secondary-color;
+}
+
+.pdms-default-action-btn {
+  @extend %defaultButton;
+  font-size: 16px;
+  text-align: center;
+}
+
+.pdms-default-cancel-btn {
+  @extend .pdms-default-action-btn;
+  color: #212121;
+  background: white;
+}
+
+.pdms-full-btn {
+  width: 100%;
+}

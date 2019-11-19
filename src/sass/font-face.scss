@@ -1,0 +1,97 @@
+@import './_variables';
+
+%defaultText {
+  font-family: $body-font-family;
+  font-style: normal;
+  font-weight: normal;
+  color: $default-header-text-color;
+}
+
+.pdms-header-24 {
+  @extend %defaultText;
+  font-size: 24px;
+}
+
+.pdms-header-24-500 {
+  @extend .pdms-header-24;
+  font-weight: 500;
+}
+
+.pdms-header-24-bold {
+  @extend .pdms-header-24;
+  font-weight: bold;
+}
+
+.pdms-text-18 {
+  @extend %defaultText;
+  font-size: 18px;
+}
+
+.pdms-text-18-500 {
+  @extend .pdms-text-18;
+  font-weight: 500;
+}
+
+.pdms-text-16 {
+  @extend %defaultText;
+  font-size: 16px;
+}
+
+.pdms-text-16-500 {
+  @extend .pdms-text-16;
+  font-weight: 500;
+}
+
+.pdms-text-14 {
+  @extend %defaultText;
+  font-size: 14px;
+}
+
+.pdms-text-14-500 {
+  @extend .pdms-text-14;
+  font-weight: 500;
+}
+
+.pdms-text-12 {
+  @extend %defaultText;
+  font-size: 12px;
+}
+
+.pdms-text-12-500 {
+  @extend .pdms-text-12;
+  font-weight: 500;
+}
+
+.pdms-number-36 {
+  @extend %defaultText;
+  font-weight: 300;
+  font-size: 36px;
+  color: $default-secondary-color;
+}
+
+.pdms-link {
+  @extend %defaultText;
+  text-decoration: none !important;
+  cursor: pointer;
+  font-size: 14px;
+  background: none !important;
+  color: $default-secondary-color !important;
+}
+
+.pdms-marquee-text {
+  @extend %defaultText;
+  font-size: 20px;
+}
+
+.pdms-marquee-text-bold {
+  @extend .pdms-marquee-text;
+  font-weight: bold;
+}
+
+.pdms-text-upper {
+  text-transform: uppercase !important;
+}
+
+.pdms-text-lower {
+  text-transform: lowercase !important;
+}

@@ -1,0 +1,82 @@
+@media screen and (max-width: 1279px) {
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 1087px) {
+  .pdms-container .campaign-summary {
+    .mat-list-item:first-child {
+      .value {
+        > .mat-form-field {
+          width: 100%;
+        }
+      }
+      .mat-form-field-infix {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .addcampaign.mat-accordion {
+    .mat-expansion-panel-body {
+      padding-left: 0;
+      padding-right: 0;
+      .mat-list-item-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .mat-vertical-content {
+    padding: 0 0px 15px 2px !important;
+  }
+  .campaign-summary.mat-list {
+    width: 96%;
+  }
+  .calendar-wrapper > div {
+    margin-left: 14%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .calendar-wrapper .mat-figure {
+    padding-left: 5% !important;
+  }
+  .calendar-wrapper > div {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  ngb-datepicker {
+    .ngb-dp-months {
+      flex-direction: row;
+    }
+  }
+  .calendar-wrapper .mat-figure {
+    padding-left: 0% !important;
+  }
+  .calendar-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .campaign-summary.mat-list {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .columns.addcampaignwrapper .column .columns {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    .text {
+      // text-align: right;
+      // align-items: center;
+      // display: flex;
+      // flex-direction: row-reverse;
+    }
+  }
+}

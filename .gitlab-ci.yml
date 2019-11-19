@@ -1,0 +1,89 @@
+image: gitlab.padua.net.au:4567/docker-images/angularbuilder:latest
+
+stages:
+  - production_build
+  - production_source_deploy
+  - production_deploy
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+#deploy_staging:
+#  stage: staging_deploy
+#  script:
+#    - chmod +x build-preflight.sh && sh build-preflight.sh
+#    - /node_modules/.bin/sentry-cli releases new "$CI_COMMIT_SHA"
+#    - /node_modules/.bin/sentry-cli releases set-commits --auto "$CI_COMMIT_SHA"
+#    - npm run ng-high-memory -- build --base-href=/ --configuration=stage --source-map
+#    - /node_modules/.bin/sentry-cli releases files "$CI_COMMIT_SHA" upload-sourcemaps dist/angular/ --rewrite
+#    - rsync -r dist/angular/ webdeploy@web01.padua.net.au:/usr/share/nginx/html/staging/nextgen --delete
+#    - /node_modules/.bin/sentry-cli releases finalize "$CI_COMMIT_SHA"
+#  environment:
+#    name: staging
+#    url: https://nextgen-staging.padua.net.au/
+#  artifacts:
+#    expire_in: 1 week
+#    name: "staging-$CI_COMMIT_SHA"
+#    paths:
+#      - dist/
+#  only:
+#    refs:
+#      - master
+
+prod_build_source:
+  stage: production_build
+  script:
+    - chmod +x build-preflight.sh && sh build-preflight.sh
+    - npm run ng-high-memory -- build --base-href=/ --prod --source-map
+  artifacts:
+    expire_in: 2 weeks
+    name: "production-$CI_COMMIT_SHA"
+    paths:
+      - dist/
+  only:
+    refs:
+      - production
+
+prod_source_to_sentry:
+  stage: production_source_deploy
+  script:
+    - /node_modules/.bin/sentry-cli releases new "$CI_COMMIT_SHA"
+    - /node_modules/.bin/sentry-cli releases set-commits --auto "$CI_COMMIT_SHA"
+    - /node_modules/.bin/sentry-cli releases files "$CI_COMMIT_SHA" upload-sourcemaps dist/padua-frontend/ --rewrite
+    - /node_modules/.bin/sentry-cli releases finalize "$CI_COMMIT_SHA"
+  dependencies:
+    - prod_build_source
+  only:
+    refs:
+      - production
+
+prod_source_to_s3:
+  stage: production_source_deploy
+  script:
+    - rm -rf dist/padua-frontend/*.map
+    - aws s3 cp dist/padua-frontend/ s3://venezia-production/$CI_COMMIT_SHA --recursive
+  dependencies:
+    - prod_build_source
+  only:
+    refs:
+      - production
+
+prod_deploy_to_cloudfront:
+  stage: production_deploy
+  script:
+    - aws configure set preview.cloudfront true
+    - aws cloudfront get-distribution-config --id E4HJA75BPCC47 > cloud.json
+    - jq --arg path "/$CI_COMMIT_SHA" -r '(.DistributionConfig.Origins.Items[] | select(.Id=="S3-venezia-production") | .OriginPath) = $path | .DistributionConfig' cloud.json > new.json
+    - aws cloudfront update-distribution --id E4HJA75BPCC47 --distribution-config file://new.json --if-match `jq -r '.ETag' cloud.json`
+    - aws cloudfront create-invalidation --distribution-id E4HJA75BPCC47 --paths /index.html /srv/*
+  dependencies:
+    - prod_build_source
+  only:
+    refs:
+      - production
+  when: manual
+  environment:
+    name: production
+    url: https://venezia.padua.net.au/

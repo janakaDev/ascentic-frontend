@@ -1,0 +1,25 @@
+@import "./_variables";
+
+.pdms-gold {
+  color: $default-primary-color;
+}
+
+.pdms-blue {
+  color: $default-secondary-color;
+}
+
+.pdms-gold-bg {
+  background-color: $default-primary-color;
+}
+
+.pdms-blue-bg {
+  background-color: $default-secondary-color;
+}
+
+.pdms-dashboard-gray {
+  color: $dashboard-summary-title-color;
+}
+
+.pdms-dashboard-stats-gray {
+  color: $dashboard-stat-color;
+}

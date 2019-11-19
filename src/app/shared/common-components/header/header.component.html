@@ -1,0 +1,64 @@
+<div *ngIf="isLoggedIn | async" [@fadeInOnEnter]>
+  <mat-toolbar class="mat-toolbar pdms-menu">
+    <mat-toolbar-row>
+      <span class="pdms-menu-header">Fasion Store</span>
+      <span class="example-spacer"></span>
+      <div
+        routerLinkActive="active-list-item"
+        class="pdms-menu-options"
+        *ngIf="isLoggedIn | async"
+        fxHide
+        fxShow.gt-xs
+      >
+        <button class="menu-btn" mat-button [matMenuTriggerFor]="userMenu">
+          {{ username | async }}
+          <mat-icon
+            class="drop-down-icon"
+            aria-hidden="false"
+            aria-label="Example heart icon"
+            >arrow_drop_down</mat-icon
+          >
+        </button>
+      </div>
+      <div
+        routerLinkActive="active-list-item"
+        class="pdms-menu-options"
+        *ngIf="isLoggedIn | async"
+        fxShow
+        fxHide.gt-xs
+      >
+        <button
+          class="menu-btn"
+          mat-button
+          [matMenuTriggerFor]="userMenuMobile"
+        >
+          <mat-icon>account_circle</mat-icon>
+          <mat-icon
+            class="drop-down-icon"
+            aria-hidden="false"
+            aria-label="Example heart icon"
+            >arrow_drop_down</mat-icon
+          >
+        </button>
+      </div>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="clickLogout()">
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+      <mat-menu #userMenuMobile="matMenu">
+        <mat-list>
+          <mat-list-item>{{ username | async }}</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <button mat-menu-item (click)="clickLogout()">
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

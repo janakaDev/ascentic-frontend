@@ -1,0 +1,116 @@
+<mat-card>
+  <form
+    class="add-cloths-form"
+    [formGroup]="addClothsForm"
+    (ngSubmit)="addClothItem()"
+  >
+    <div class="columns">
+      <div class="column is-half">
+        <div class="form-list">
+          <mat-form-field
+            appearance="standard"
+            class="add-news-full-width"
+          >
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+            <mat-error>Name is required!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="form-list">
+          <mat-form-field
+            appearance="standard"
+            class="add-news-full-width"
+          >
+            <mat-label>Code</mat-label>
+            <input matInput formControlName="productCode">
+            <mat-error>Code is required!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+      <div class="columns">
+        <div class="column is-half">
+          <div class="form-list">
+            <mat-form-field
+              appearance="standard"
+              class="add-news-full-width"
+            >
+              <mat-label>Short Description</mat-label>
+              <input matInput formControlName="sd">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="form-list">
+            <mat-form-field
+              appearance="standard"
+              class="add-news-full-width"
+            >
+              <mat-label>Cost</mat-label>
+              <input matInput formControlName="cost">
+              <mat-error>Cost is required!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+        <div class="columns">
+          <div class="column is-half">
+            <div class="form-list">
+              <mat-form-field>
+                <mat-label>Brand Name</mat-label>
+                <select matNativeControl formControlName="brand">
+                  <option value="1">Puma</option>
+                  <option value="2">Adidas</option>
+                  <option value="3">Nike</option>
+                  <option value="4">Under Armour</option>
+                </select>
+                <mat-error>Brand is required!</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="form-list">
+              <mat-form-field
+                appearance="standard"
+                class="add-news-full-width"
+              >
+                <mat-label>Color</mat-label>
+                <input matInput formControlName="color">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-half">
+            <div class="form-list">
+              <mat-form-field
+                appearance="standard"
+                class="add-news-full-width"
+              >
+                <mat-label>Size</mat-label>
+                <input matInput formControlName="size">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <!-- Action button and cancellation -->
+        <div class="columns">
+          <div class="column is-half">
+            <div class="form-list">
+              <div
+                class="action-button-container"
+                fxLayout="row"
+                fxLayoutAlign="start"
+              >
+                <button type="submit" color="accent" mat-raised-button>
+                  Add Cloth
+                </button>
+                <a mat-button [routerLink]="['/clothes']">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  </form>
+</mat-card>

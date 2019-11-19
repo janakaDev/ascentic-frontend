@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div *ngIf="login"> -->
+<ngx-loading-bar></ngx-loading-bar>
+<app-header></app-header>
+<!-- </div> -->
+<div>
+  <div
+    [class.pdms-container]="isLoggedIn | async"
+    [class.container]="isLoggedIn | async"
+  >
+    <router-outlet></router-outlet>
+  </div>
+</div>

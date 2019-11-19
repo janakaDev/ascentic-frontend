@@ -1,0 +1,616 @@
+// .example-custom-date-class {
+//   background: orange;
+//   border-radius: 100%;
+// }
+// .custom-day {
+//   text-align: center;
+//   padding: 0.185rem 0.25rem;
+//   display: inline-block;
+//   height: 2rem;
+//   width: 2rem;
+// }
+// .custom-day.focused {
+//   background-color: #e6e6e6;
+// }
+// .custom-day.range,
+// .custom-day:hover {
+//   background-color: rgb(2, 117, 216);
+//   color: white;
+// }
+// .custom-day.faded {
+//   background-color: rgba(2, 117, 216, 0.5);
+// }
+
+/**** Start Of mat-slider custon styles ****/
+// .mat-slider {
+//   .mat-slider-wrapper {
+//     height: 20px;
+//     .mat-slider-track-wrapper,
+//     .mat-slider-ticks-container {
+//       height: 20px;
+//       .mat-slider-track-fill,
+//       .mat-slider-ticks {
+//         height: 20px;
+//       }
+//     }
+//     .mat-slider-ticks-container {
+//       transform: translateX(-2.5%) !important;
+//       .mat-slider-ticks {
+//         opacity: 1;
+//         background-size: 5% 2px !important;
+//         transform: translateZ(0px) translateX(2.5%) !important;
+//         height: 20px;
+//         background-image: repeating-linear-gradient(
+//           to right,
+//           rgba(255, 255, 255, 1),
+//           rgba(255, 255, 255, 1) 5px,
+//           transparent 0,
+//           transparent
+//         );
+//       }
+//     }
+//     .mat-slider-track-wrapper {
+//       .mat-slider-track-fill {
+//         background-color: rgb(51, 122, 183);
+//       }
+//     }
+//     .mat-slider-track-background {
+//       height: 20px;
+//     }
+//   }
+//   .mat-slider-thumb {
+//     border-radius: 0;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     right: 0px;
+//     bottom: -25px;
+//     box-sizing: border-box;
+//     width: 10px;
+//     height: 40px;
+//   }
+//   .mat-slider-thumb-label {
+//     background-color: rgba(0, 0, 0, 0.7);
+//   }
+// }
+
+.addcampaign {
+  margin-top: 78px;
+  display: block;
+}
+.campaign-summary {
+  width: 100%;
+  .capmaign-summary-wrapper {
+    width: 100%;
+    > span {
+      display: inline-block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .text {
+      // width: 140px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .value {
+      padding-right: 20px !important;
+      text-align: left;
+    }
+  }
+  .costs {
+    .value {
+      width: 64%;
+      // text-align: right;
+    }
+  }
+  .final-cost {
+    font-weight: 600;
+  }
+  .total-price {
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+  }
+  .discount-wrapper {
+    display: flex !important;
+    .text {
+      margin-top: auto;
+      // margin-bottom: 26px;
+    }
+    .mat-form-field {
+      padding-right: 4px !important;
+      //width: 45% !important;
+    }
+    .mat-chip {
+      background-color: #e0e0e0;
+      width: 100%;
+      margin: 0;
+      .text {
+        width: 57%;
+        float: left;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .value {
+        width: 60px;
+        float: left;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .mat-icon {
+        float: right;
+        margin-top: 5px;
+      }
+    }
+    .mat-form-field-underline {
+      width: 74%;
+    }
+  }
+}
+.popup-heading {
+  text-align: left;
+  font-weight: 600;
+  margin-left: 7px;
+  font-size: 16px;
+  color: #000;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.ngb-dp-month + .ngb-dp-month > .ngb-dp-month-name,
+.ngb-dp-month + .ngb-dp-month > ngb-datepicker-month-view > .ngb-dp-week {
+  padding-left: 0.25rem !important;
+}
+.campaign-summary-card {
+  .mat-form-field {
+    margin-right: 30px;
+  }
+}
+.campaign-summary.mat-list.mat-list-base {
+  .mat-list-item {
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  .mat-list-item.submit-area {
+    height: auto;
+  }
+  .mat-list-item.slot-slider {
+    // margin-bottom: 20px;
+  }
+}
+.discount-code-adder {
+  .mat-chip-with-trailing-icon.mat-standard-chip {
+    border-radius: 3px;
+    margin-bottom: 5px !important;
+  }
+  .mat-icon.mat-chip-trailing-icon {
+  }
+}
+.mat-raised-button.addnewcampaign {
+  float: right;
+  margin-top: 20px;
+}
+.mat-list-base {
+  .discount-code.mat-list-item {
+    height: auto !important;
+    span.text {
+      // width: 25%;
+    }
+    .capmaign-summary-wrapper > mat-form-field {
+      width: 70%;
+    }
+  }
+  .submit-area.mat-list-item {
+    .capmaign-summary-wrapper {
+      text-align: left;
+    }
+  }
+  .discount-main-heading.mat-list-item {
+    height: auto;
+    .capmaign-summary-wrapper {
+      position: relative;
+      margin-bottom: -10px;
+      margin-top: 10px;
+    }
+  }
+}
+
+/**** End Of mat-slider custon styles ****/
+
+/*** Start of datepicker-legends ***/
+.datepicker-legends {
+  > div:first-child {
+    font-size: 16px;
+    color: #000;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 600;
+  }
+  .mat-chip-list-wrapper {
+    > span {
+      width: 100%;
+      margin: 1px 0;
+    }
+    .mat-standard-chip {
+      padding: 3px 20px;
+      border-radius: 0px;
+      min-height: 2px;
+      top: -5px;
+      span {
+        margin-left: 10px;
+      }
+    }
+    span {
+      font-size: 14px;
+      line-height: 24px;
+      color: #000;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+  }
+}
+@media only screen and (min-width: 650px) {
+  ngb-datepicker {
+    .ngb-dp-months {
+      flex-direction: column;
+      display: flex;
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  ngb-datepicker {
+    .ngb-dp-months {
+      flex-direction: column;
+      display: initial;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .campaign-summary {
+    .costs {
+      .value {
+        width: 50%;
+      }
+    }
+    .capmaign-summary-wrapper.campaign-half-column {
+      display: initial !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .campaign-summary {
+    .capmaign-summary-wrapper.campaign-half-column {
+      display: flex !important;
+    }
+  }
+}
+ngb-datepicker {
+  .ngb-dp-navigation-select {
+    display: none;
+  }
+  .ngb-dp-week {
+    position: relative;
+  }
+  .weekbar {
+    left: 36px;
+    height: 5px;
+    position: absolute;
+    float: left;
+    bottom: -5px;
+  }
+  .bookedspace {
+    background-color: #ffab40;
+    z-index: 102;
+  }
+  .bookingedspace {
+    background-color: #205080;
+    z-index: 101;
+  }
+  .availablespace {
+    background-color: #dee8f5;
+    z-index: 100;
+    width: 69%;
+  }
+}
+.calendar-wrapper {
+  > div {
+    margin-left: 10px;
+  }
+  .mat-figure {
+    padding-left: 10% !important;
+  }
+}
+.columns.addcampaignwrapper {
+  margin: 0;
+  .column {
+    padding-left: 0;
+    padding-right: 0;
+    .columns {
+      margin: 0;
+    }
+  }
+}
+/*** End of datepicker-legends ***/
+/**** Start of Advertistment submission area ***/
+.ad-code-form {
+  padding-top: 30px;
+  .mat-list-base {
+    .mat-list-item {
+      height: auto;
+      margin-bottom: 30px;
+    }
+    .adv-wrapper {
+      display: flex;
+      width: 100%;
+      .ad-code {
+        width: 70%;
+        margin-right: 20px;
+        .mat-form-field {
+          width: 100%;
+        }
+        textarea {
+          height: 74px;
+        }
+      }
+    }
+  }
+}
+.creative-code-form {
+  .mat-list-base {
+    .mat-list-item {
+      height: auto;
+      margin-bottom: 30px;
+    }
+    .creative-wrapper {
+      display: flex;
+      width: 100%;
+      .creative-image {
+        width: 30%;
+        margin-right: 20px;
+        .mat-form-field {
+          width: 100%;
+        }
+        .upload-drop-zone {
+          height: 100px;
+          background-color: rgba(51, 122, 183, 0.15);
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          &:hover {
+            cursor: pointer;
+          }
+          &:active {
+            border: 1px dashed #ffab40;
+          }
+          .droptext-wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .main-text {
+              color: #444;
+            }
+            .sub-text {
+              color: #777;
+            }
+          }
+          .ngx-file-drop__drop-zone {
+            border-radius: 0 !important;
+          }
+          .ngx-file-drop__content {
+            span {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+          .ngx-file-drop__content {
+            flex-direction: column;
+            text-align: center;
+            .main-text {
+              color: #337ab7;
+            }
+            .sub-text {
+              color: #757575;
+            }
+          }
+        }
+      }
+      .creative-url {
+        width: 100%;
+        position: relative;
+        .mat-form-field {
+          width: 95%;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+/**** End of Advertistment submission area ***/
+/**** Start of campain summary screen area ***/
+.campaign-data {
+  .mat-cell.mat-column-GST,
+  .mat-cell.mat-column-Cost,
+  .mat-cell.cdk-column-Impressions,
+  .mat-cell.cdk-column-SOV,
+  .mat-cell.cdk-column-Discount,
+  .mat-footer-cell.mat-column-Cost,
+  .mat-footer-cell.mat-column-GST {
+    text-align: right;
+  }
+  .mat-header-cell.mat-column-GST,
+  .mat-header-cell.mat-column-Cost,
+  .mat-header-cell.cdk-column-Impressions,
+  .mat-header-cell.cdk-column-SOV,
+  .mat-header-cell.cdk-column-Discount {
+    text-align: right;
+  }
+  .mat-footer-cell.mat-column-Cost,
+  .mat-footer-cell.mat-column-GST {
+    font-weight: bold;
+  }
+  .mat-header-cell,
+  .mat-cell,
+  .mat-footer-cell {
+    padding-top: 15px;
+  }
+  td.mat-footer-cell:first-of-type {
+    padding-left: 0px;
+    padding-top: 5px;
+  }
+}
+.table-bottom-wrapper {
+  display: flex;
+}
+/**** End of campain summary screen area ***/
+
+.selected-date-wrapper {
+  > div {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 16px;
+    position: relative;
+    color: rgba(0, 0, 0, 0.543846);
+    .mat-icon {
+      margin-top: -8px;
+      position: absolute;
+      line-height: 7px;
+      font-size: 18px;
+      color: #000;
+    }
+  }
+}
+
+.custom-day {
+  text-align: center;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+.custom-day:hover {
+  background-color: #e6e6e6;
+}
+.disabled {
+  color: #bbbbbb !important;
+  background-color: #fff !important;
+}
+.disabled:hover {
+  background-color: transparent;
+}
+.custom-day.disabled {
+  cursor: default;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+.holiday,
+.holiday.disabled,
+.holiday:hover {
+  color: white;
+  background-color: coral;
+}
+.range:not(.holiday):not(.disabled),
+.custom-day:not(.disabled):not(.holiday):hover {
+  background-color: #337ab7;
+  color: white;
+}
+.faded:not(.holiday):not(.disabled) {
+  background-color: rgba(2, 117, 216, 0.5);
+}
+.mat-step-header {
+  .mat-step-icon-content {
+    color: #fff;
+    font-size: 14px;
+  }
+  .mat-step-icon-selected {
+    background-color: #337ab7;
+    color: #fff;
+    font-size: 14px;
+  }
+  .mat-step-icon-state-edit {
+    background-color: #337ab7;
+  }
+}
+.mat-stepper-vertical.v-stepper {
+  .mat-step:first-child {
+    .mat-vertical-content {
+      padding: 0 0px 0px 24px;
+    }
+  }
+  .mat-card {
+    box-shadow: none;
+  }
+  .mat-vertical-stepper-header {
+    align-items: flex-start;
+    height: auto;
+  }
+  .stepsummaryinfo {
+    margin-top: 12px;
+    display: block;
+    color: rgba(0, 0, 0, 0.543846);
+    div {
+      color: rgba(0, 0, 0, 0.543846);
+    }
+  }
+  .select-dates {
+    .campaign-next {
+      margin-top: 20px;
+    }
+  }
+}
+.adpreview .mat-list-base .mat-list-item .mat-list-item-content {
+  flex-direction: column !important;
+}
+.done-wrapper {
+  .mat-icon {
+    color: #008000;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.mat-icon.mat-warn {
+  color: #f44336 !important;
+}
+.dialog-close {
+  float: right;
+  top: -68px;
+  left: 7px;
+}
+.dialog-close.add-campaign {
+  float: right;
+  top: -10px;
+  left: 7px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  line-height: 26px;
+}
+.columns.add-campaign-heading {
+  margin-bottom: 0 !important;
+  .column {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    .mat-icon-button {
+      // height: 30px;
+    }
+  }
+}
+.ngb-dp-header {
+  position: relative;
+  ngb-datepicker-navigation {
+    position: absolute;
+    width: 100%;
+    .ngb-dp-arrow.right {
+      text-align: right;
+    }
+  }
+}
+
+.dates-display-wrapper {
+  .value {
+    flex-grow: 0.8;
+  }
+}
+
+.dl-invoice {
+  .mat-button-wrapper {
+    color: #337ab7;
+  }
+}

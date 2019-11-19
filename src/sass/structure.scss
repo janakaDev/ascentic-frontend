@@ -1,0 +1,127 @@
+.pdms-container {
+  margin: 20px auto !important;
+  margin-top: 76px !important;
+  padding-bottom: 40px;
+
+  .mat-toolbar-single-row {
+    z-index: 1;
+  }
+
+  // .mat-stepper-vertical {
+  //   border-radius: 4px;
+  //   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  //     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  //   border-radius: 4px;
+  // }
+}
+.mat-slider {
+  width: 100%;
+}
+.mat-card {
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+}
+.auto-height,
+mat-card .mat-list-base .mat-list-item.auto-height {
+  height: auto;
+}
+// button.mat-raised-button,
+// .mat-blue-button.mat-fab {
+//   background-color: #337ab7;
+//   color: #fff;
+// }
+
+button.mat-raised-button.backbtn {
+  background-color: #fff;
+  color: #000;
+  margin-right: 20px;
+}
+
+.btnwrapper {
+  width: 100%;
+  .innerbtnwrapper {
+    button {
+      width: 79px;
+    }
+  }
+  .previewbtnwrapper {
+    margin-bottom: 15px;
+  }
+}
+.mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: #337ab7;
+  }
+}
+.mat-input-element {
+  caret-color: #337ab7;
+}
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #337ab7;
+}
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: #337ab7;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #337ab7;
+}
+/*
+app-campaigns .mat-form-field-infix {
+  width: 300px;
+}
+*/
+.campaign-summary-card .mat-form-field-infix {
+  width: 300px;
+}
+
+.pdms-form-container {
+  .form-list {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .action-button-container {
+    margin-top: 30px;
+    padding-bottom: 40px;
+
+    a:first-child,
+    button:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+.mat-tab-group.mat-primary .mat-ink-bar {
+  background-color: #337ab7;
+}
+
+// :host /deep/
+.filter-container {
+  border-radius: 10px;
+  border: 0.5px solid rgba(25, 22, 22, 0.1);
+  padding: 20px;
+  margin: 25px 0px;
+  width: 100%;
+
+  mat-form-field {
+    margin-right: 15px;
+    .mat-form-field-wrapper {
+      padding-bottom: 0px;
+    }
+  }
+  mat-form-field:last-child {
+    margin-right: 0px;
+  }
+}
+.campaign-btn {
+  width: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+  .filter-container {
+    mat-form-field {
+      margin: 0px;
+      width: 100%;
+    }
+  }
+}

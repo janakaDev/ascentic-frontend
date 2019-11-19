@@ -1,0 +1,75 @@
+@import '../../../../sass/_variables';
+
+.mat-step-icon-selected {
+  background-color: #000;
+}
+
+.pdms-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  box-shadow: 0px 4px 4px rgba(33, 33, 33, 0.25);
+  .pdms-menu-header {
+    font-weight: normal;
+    font-size: 24px;
+    color: white;
+  }
+  .pdms-menu-options > button.menu-btn {
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .pdms-menu-options > button.menu-btn.active {
+    border-bottom: 4px;
+    color: white;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.menu-btn {
+  color: white;
+  font-size: 20px;
+  font-weight: 1px;
+}
+.user-name {
+  display: inline;
+}
+
+.drop-down-icon {
+  padding-bottom: 5px;
+}
+.active-list-item {
+  span {
+    position: relative;
+  }
+}
+
+.active-list-item::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: white;
+  position: relative;
+  bottom: 0px;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .btn-menu {
+    color: black;
+    font-size: 15px;
+  }
+
+  .pdms-menu {
+    .pdms-menu-header {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+}

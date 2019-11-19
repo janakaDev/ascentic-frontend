@@ -1,0 +1,28 @@
+// Variables for text color and fonts
+
+$default-primary-color: #d97d20;
+$default-secondary-color: #337ab7;
+$dashboard-summary-title-color: #979797;
+$dashboard-stat-color: #4f4f4f;
+
+$body-font-family: 'Roboto', sans-serif;
+
+$default-header-text-color: rgba(0, 0, 0, 0.87);
+
+// // PADUA Material color mapping
+
+$mat-padua-orange: (
+  P100: #d97d20,
+  P200: #f27440,
+  contrast: (
+    P100: #fff,
+    P200: #fff
+  )
+);
+
+$mat-padua-blue: (
+  Q100: #337ab7,
+  contrast: (
+    Q100: #fff
+  )
+);
