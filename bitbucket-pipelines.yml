@@ -11,12 +11,4 @@ clone:
 pipelines:
   default:
   
-    - step:
-          name: Build
-          script:
-            - cd padua-app
-            - git archive --format=tar.gz master -o padua-app.tar.gz
-          artifacts:
-            - padua-app/padua-app.tar.gz
-  
     
